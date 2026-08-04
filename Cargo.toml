@@ -10,8 +10,5 @@ bevy-fragment-shader-plugin = { path = "../Bevy-Shader-Plugin", features = [
     "spirv",
 ] }
 
-# shader-build (and the shader crate nested inside it) is built by a different
-# toolchain — see shader-build/rust-toolchain.toml — so it must stay out of this
-# workspace. This app itself builds on stable.
 [workspace]
 exclude = ["shader-build"]

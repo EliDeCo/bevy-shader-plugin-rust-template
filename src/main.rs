@@ -1,15 +1,10 @@
-//! Solar system rendered by a fragment shader written in Rust via rust-gpu.
-//!
-//! Identical to `Bevy-Shader-Plugin/examples/solar_system.rs` except that the
-//! shader is a `.spv` module compiled from `shader/src/lib.rs` instead of WGSL.
-//! Run `cargo build` in `shader-build/` first — see README.md.
+//! Solar system rendered by a fragment shader written in Rust.
+//! Build the shader first: `cd shader-build && cargo build`.
 
 use bevy::prelude::*;
 use bevy_fragment_shader_plugin::prelude::*;
 
-// Compiled from shader/src/lib.rs by shader-build/build.rs.
 const SHADER_PATH: &str = "shaders/solar_system.spv";
-// The Rust fn name of the `#[spirv(fragment)]` entry point.
 const ENTRY_POINT: &str = "main_fs";
 
 const N: usize = 8;
