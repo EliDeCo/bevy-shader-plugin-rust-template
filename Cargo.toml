@@ -6,7 +6,7 @@ publish = false
 
 [dependencies]
 bevy = "0.19.1"
-bevy-shader-plugin = { version = "0.2", features = ["spirv"] }
+bevy-shader-plugin = { version = "0.2.1", features = ["spirv"] }
 
 # Compiles the shader crate in `shader/` (see build.rs).
 [build-dependencies]
