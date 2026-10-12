@@ -1,0 +1,4 @@
+# TEMPORARY, do not commit. Builds against the local plugin until bevy-shader-plugin 0.2 is on
+# crates.io. Delete this file after publishing.
+[patch.crates-io]
+bevy-shader-plugin = { path = "../Bevy Shader Plugin" }

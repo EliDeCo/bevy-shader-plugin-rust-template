@@ -1,0 +1,6 @@
+[toolchain]
+channel = "nightly-2026-07-03"
+components = ["rust-src", "rustc-dev", "llvm-tools"]
+
+# Must match the toolchain rust-gpu 0.10.0 requires (`REQUIRED_RUST_TOOLCHAIN` in
+# rustc_codegen_spirv's build.rs). Update it together with spirv-builder/spirv-std.

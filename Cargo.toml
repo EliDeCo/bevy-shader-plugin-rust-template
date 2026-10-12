@@ -1,14 +1,21 @@
 [package]
-name = "solar-system-rustgpu"
+name = "bevy-shader-plugin-rust-template"
 version = "0.1.0"
 edition = "2024"
 publish = false
 
 [dependencies]
-bevy = "0.18.0"
-bevy-fragment-shader-plugin = { path = "../Bevy-Shader-Plugin", features = [
-    "spirv",
-] }
+bevy = "0.19.1"
+bevy-shader-plugin = { version = "0.2", features = ["spirv"] }
 
-[workspace]
-exclude = ["shader-build"]
+# Compiles the shader crate in `shader/` (see build.rs).
+[build-dependencies]
+spirv-builder = "0.10.0"
+
+# Compile build-dependencies in release mode with the same settings as regular
+# dependencies. Otherwise the rust-gpu compiler is built in debug mode and is very slow.
+[profile.release.build-override]
+opt-level = 3
+codegen-units = 16
+[profile.dev.build-override]
+opt-level = 3
